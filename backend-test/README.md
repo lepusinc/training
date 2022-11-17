@@ -28,3 +28,25 @@
 
 * `calculate` の実装をリファクタリングする。
   * ソフトウェアテストの目的 2 に注目
+
+
+## Installation
+
+### Requirements
+* PHP 8.0+
+
+### Install composer packages
+```
+$ cd training/backend-test
+$ composer install
+```
+
+### Run program
+```
+$ php index.php
+```
+
+### Run phpUnit
+```
+$ vendor/phpunit/phpunit/phpunit tests
+```
