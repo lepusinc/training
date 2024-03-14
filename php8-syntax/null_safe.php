@@ -43,10 +43,13 @@ class Investor
 $investor = new Investor();
 
 // 従来：NULL安全演算子なし
-// echo !is_null($investor->getDepositAccount()) ?
-//     $investor->getDepositAccount()->getBalance() . PHP_EOL :
-//     0
-// ;
+echo $investor->getDepositAccount()->getBalance() . PHP_EOL;
+
+// 従来：別の書き方
+echo !is_null($investor->getDepositAccount()) ?
+    $investor->getDepositAccount()->getBalance() :
+    0
+;
 
 // PHP8：NULL安全演算子あり
-echo $investor->getDepositAccount()?->getBalance() . PHP_EOL;
+// echo $investor->getDepositAccount()?->getBalance() . PHP_EOL;
