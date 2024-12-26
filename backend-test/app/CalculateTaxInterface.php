@@ -5,12 +5,8 @@ namespace App;
 interface CalculateTaxInterface
 {
     /**
-     * @param integer $price
-     * @param integer $percentage
-     * @return integer
+     * @param float $price
+     * @return float
      */
-    public static function calculate(
-        int $price,
-        int $percentage
-    ): int;
+    public static function calculate(float $price): float;
 }

@@ -9,23 +9,22 @@ class CalculateTaxTest extends TestCase
     /**
      * @dataProvider data_calculate
      */
-    public function test_calculate($price, $percentage, $expect)
+    public function test_calculate($price, $expectedPrice)
     {
         $this->assertEquals(
-            $expect,
-            CalculateTax::calculate($price, $percentage)
+            $expectedPrice,
+            CalculateTax::calculate($price)
         );
     }
 
     public function data_calculate()
     {
         return [
+            // 税率は10%
             [
-                'price' => 3000,
-                'percentage' => 10,
-                'expect' => 3300,
+                'price' => 3000.0,
+                'expectedPrice' => 3300.0,
             ],
         ];
     }
 }
-
